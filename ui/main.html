@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+        <title>STIX2 GUI</title>
+        <script src="/eel.js"></script>
+        <script src="/lib/jquery-3.3.1.min.js"></script>
+        <script src="/main.js"></script>
+        <style>
+            textarea {
+                height: 500px;
+            }
+            .boxsizingBorder {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .flex {
+                display: flex;
+            }
+            .column2 {
+                flex: 50%;
+                border: 1px solid lightblue;
+                padding: 10px;
+                height: 500px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="flex">
+            <div class="column2">
+                <div><textarea class="boxsizingBorder" id="inputText">{
+  "type": "report",
+  "id": "report--c6c7ebc4-3f65-4375-b22d-313e894ab3d5",
+  "created": "2017-07-18T22:00:30.405Z",
+  "modified": "2017-07-18T22:00:30.405Z",
+  "name": "IMDDOS Botnet",
+  "labels": [
+    "threat-report"
+  ],
+  "description": "The newly-uncovered IMDDOS Botnet is a commercial DDOS service hosted in China.",
+  "published": "2010-09-13T00:00:00.000Z",
+  "object_refs": [
+    "malware--efd5ac80-79ba-45cc-9293-01460ad85303",
+    "threat-actor--e234c322-0981-4aa4-ae03-f4037e6be83f",
+    "indicator--691d06b5-aa1d-46ec-97d6-e59ef9411b8a",
+    "indicator--b2ab314f-3a97-44d4-bfca-6a9857a6fe17",
+    "indicator--ca26195e-e3c0-4139-8e21-0af90c89bd27",
+    "indicator--644bc5dc-1627-4c3a-b9d8-bb2a9fa30567"
+  ],
+  "object_marking_refs": [
+    "marking-definition--dc1b5371-1918-4e57-93f2-25d1d78d983f"
+  ],
+  "external_references": [
+    {
+      "source_name": "Damballa, Inc.",
+      "url": "https://www.coresecurity.com/system/files/publications/2017/03/Damballa_Report_IMDDOS.pdf",
+      "hashes": {
+        "SHA-1": "4e0f4197d6d61f52f80a5560d78af599a37277c0"
+      }
+    }
+  ]
+}
+                </textarea></div>
+                <div><button id="parseButton">Parse</button></div>
+            </div>
+            <div class="column2">
+                <div><textarea class="boxsizingBorder" id="outputText" readonly></textarea></div>
+            </div>
+        </div>
+    </body>
+</html>
